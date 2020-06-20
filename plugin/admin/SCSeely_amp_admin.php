@@ -1,4 +1,5 @@
 <?php
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 require (__DIR__ . '/../classes/SCSeely_amp_constants.php');
 

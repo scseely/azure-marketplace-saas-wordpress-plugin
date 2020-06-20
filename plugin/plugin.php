@@ -8,7 +8,7 @@ Author: Scott Seely (scott@scottseely.com)
 Author URI: https://github.com/scseely/
 License: MIT
 */
-
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 require_once('classes/SCSeely_amp.php');
 SCSeely_amp::init();
 

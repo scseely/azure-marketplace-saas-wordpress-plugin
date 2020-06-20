@@ -1,4 +1,6 @@
 <?php
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
 if(!class_exists('SCSeely_amp_constants')) {
     class SCSeely_amp_constants{
         const SubscriptionTableName = 'scseely_amp_subscriptions';
