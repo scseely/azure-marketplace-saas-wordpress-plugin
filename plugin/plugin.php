@@ -129,7 +129,16 @@ function display_marketplace_client_secret_element()
     display_password_field('scseely_amp_marketplace_client_secret');
 }
 
+function scseely_amp_register_webhook() {
+    register_rest_route( 'scseely_amp/v1', '/webhook', array(
+            'methods' => 'POST',
+            'callback'=> 'scseely_amp_process_webhook'
+    ));
+}
+
+
 register_activation_hook( __FILE__, 'scseely_amp_install' );
 register_deactivation_hook(__FILE__, 'scseely_amp_uninstall');
 add_action('admin_menu', 'scseely_amp_admin_actions');
 add_action('admin_init', 'display_options');
+add_action('rest_api_init', 'scseely_amp_register_webhook');
